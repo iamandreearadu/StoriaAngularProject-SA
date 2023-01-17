@@ -1,0 +1,179 @@
+<div class="form fs-5 p-3">
+  <div class="d-flex p-3">
+    <select class="form-select mx-3" aria-label="Default select example">
+      <option selected>Choose location</option>
+      <option value="1">Storia Italia</option>
+      <option value="2">Storia Caffe</option>
+      <option value="3">Storia Events</option>
+    </select>
+
+    <div class="row">
+      <div class="col-xs-12 col-12 col-md-4 form-group mb-3 date-input">
+        <input
+          type="text"
+          placeholder="Datepicker"
+          class="form-control"
+          bsDatepicker
+        />
+      </div>
+    </div>
+
+    <select
+      class="form-select select-time px-2 rounded mx-3"
+      aria-label="Default select example"
+    >
+      <option selected>Time</option>
+      <option value="1">15</option>
+      <option value="2">16</option>
+      <option value="3">17</option>
+      <option value="3">18</option>
+      <option value="3">19</option>
+      <option value="3">20</option>
+      <option value="3">21</option>
+      <option value="3">22</option>
+    </select>
+  </div>
+
+  <form
+    action=""
+    class="d-flex flex-column"
+    [formGroup]="modalForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="d-flex ms-2 mt-2">
+      <label for="fullname" class="d-block p-2">Fullname</label>
+      <input
+        id="fullname"
+        type="text"
+        class="input-field w-50 rounded"
+        placeholder="your fullname here..."
+        formControlName="fullname"
+      />
+    </div>
+    <div
+      *ngIf="
+        !modalForm.get('fullname')?.valid &&
+        (modalForm.get('fullname')?.touched || modalForm.get('fullname')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!modalForm.get('fullname')?.hasError('required')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Field required
+      </small>
+      <small
+        [hidden]="!modalForm.get('fullname')?.hasError('pattern')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Only letters allowed
+      </small>
+    </div>
+    <div class="d-flex ms-2 mt-2">
+      <label for="age" class="d-block p-2">Age</label>
+      <input
+        id="age"
+        type="text"
+        class="input-field w-50 rounded"
+        placeholder="your age here..."
+        formControlName="age"
+      />
+    </div>
+    <div
+      class="d-flex flex-column"
+      *ngIf="
+        !modalForm.get('age')?.valid &&
+        (modalForm.get('age')?.touched || modalForm.get('age')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!modalForm.get('age')?.hasError('required')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Field required
+      </small>
+      <small
+        [hidden]="!modalForm.get('age')?.hasError('pattern')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Only numbers allowed
+      </small>
+    </div>
+    <div class="d-flex ms-2 mt-2">
+      <label for="phone" class="d-block p-2">Phone</label>
+      <input
+        id="phone"
+        type="text"
+        class="input-field w-50 rounded"
+        placeholder="your phone here..."
+        formControlName="phone"
+      />
+    </div>
+    <div
+      class="d-flex flex-column"
+      *ngIf="
+        !modalForm.get('phone')?.valid &&
+        (modalForm.get('phone')?.touched || modalForm.get('phone')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!modalForm.get('phone')?.hasError('required')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Field required
+      </small>
+      <small
+        [hidden]="!modalForm.get('phone')?.hasError('pattern')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Only numbers allowed
+      </small>
+      <small
+        [hidden]="!modalForm.get('phone')?.hasError('minlength')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Phone number must be at least 8 characters long.
+      </small>
+    </div>
+    <div class="d-flex ms-2 mt-2">
+      <label for="persons" class="d-block p-2">Persons</label>
+      <input
+        id="persons"
+        type="text"
+        class="input-field w-50 rounded"
+        placeholder="number of persons here..."
+        formControlName="persons"
+      />
+    </div>
+    <div
+      *ngIf="
+        !modalForm.get('persons')?.valid &&
+        (modalForm.get('persons')?.touched || modalForm.get('persons')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!modalForm.get('persons')?.hasError('required')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Field required
+      </small>
+      <small
+        [hidden]="!modalForm.get('persons')?.hasError('pattern')"
+        class="error text-danger"
+        aria-live="polite"
+      >
+        Only numbers allowed
+      </small>
+    </div>
+
+    <app-my-button class="m-2" type="submit" [Name]="'Submit'"></app-my-button>
+  </form>
+</div>

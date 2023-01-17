@@ -1,0 +1,19 @@
+button {
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: rgb(10, 10, 10, 0.5);
+  box-shadow: 1px 1px 2px rgb(174, 150, 137, 0.3);
+}
+
+button:hover {
+  background: rgb(174, 150, 137);
+}
+
+button:active {
+  transform: scale(1.05);
+  transition: 0.2ms ease-out;
+}
+
+button:disabled {
+  border: none;
+}

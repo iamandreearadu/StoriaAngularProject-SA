@@ -1,0 +1,18 @@
+:root {
+  /*  primary color*/
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+}
+router-outlet,
+main {
+  color: rgb(174, 150, 137);
+  background-color: rgb(7, 7, 7);
+}
+
+body {
+  color: rgb(174, 150, 137);
+  background-color: rgb(7, 7, 7);
+
+  /* background-color: rgb(14, 14, 14); */
+}

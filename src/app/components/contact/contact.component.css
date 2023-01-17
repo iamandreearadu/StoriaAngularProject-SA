@@ -1,0 +1,30 @@
+* {
+  background-color: rgb(7, 7, 7);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+h1 {
+  color: rgb(174, 150, 137);
+  border-top: 1px solid rgb(174, 150, 137);
+  letter-spacing: 5px;
+  padding: 5rem;
+}
+
+/* article {
+  flex: 1;
+  margin: 1.5em;
+} */
+.article-1 {
+  color: rgb(174, 150, 137);
+}
+
+/* .article-2 {
+  max-width: 550px;
+} */
+
+/* @media (max-width: 1150px) {
+  .form-container .article-container {
+    display: flex;
+    flex-direction: column;
+  }
+} */

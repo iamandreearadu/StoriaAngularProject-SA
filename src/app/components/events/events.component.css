@@ -1,0 +1,50 @@
+.wrapperr {
+  background-color: rgb(7, 7, 7);
+  padding: 5em 0;
+}
+
+h1,
+h3 {
+  font-family: papyrus;
+  color: rgb(174, 150, 137);
+  font-weight: 600;
+}
+.card {
+  border: none;
+  border-radius: 25px;
+  min-height: 500px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+}
+.guest-price-data {
+  border-radius: 16px;
+
+  background-color: rgba(0, 0, 0, 0.725);
+}
+.guest,
+.price {
+  font-weight: 600;
+  color: rgb(174, 150, 137);
+}
+
+.create-event-form-label {
+  width: 11em;
+}
+
+.form-area input {
+  color: whitesmoke;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(174, 150, 137);
+}
+
+.create-event-submit-input {
+  border-radius: 10px;
+  background-color: antiquewhite;
+  background-color: rgba(0, 0, 0, 0.525);
+}

@@ -1,0 +1,23 @@
+::ng-deep .modal-content {
+  border-radius: 25px;
+  background-color: rgba(7, 7, 7, 0.85);
+}
+
+h4 {
+  color: rgb(174, 150, 137);
+}
+
+.btn-reservation {
+  background-color: rgba(0, 0, 0, 0.459);
+  border-radius: 65px;
+  white-space: nowrap;
+}
+
+.btn-reservation:hover {
+  transition: all 0.5s ease-out;
+  background-color: rgba(0, 0, 0, 0.883);
+}
+.btn-reservation:active {
+  transform: scale(1.05);
+  transition: all 0.1s ease-out;
+}

@@ -1,0 +1,66 @@
+<div
+  class="nav-container"
+  [ngStyle]="{ 'background-image': 'url(' + BackgroundPhoto + ')' }"
+>
+  <nav class="nav w-100" [ngStyle]="{ height: '' + HeightNav + '' }">
+    <input type="checkbox" id="nav-check" />
+    <div class="nav-header d-inline">
+      <div class="nav-title d-inline-block">
+        <img class="w-75" [src]="Logo" alt="STORIA ITALIA" />
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <div
+      class="nav-links d-inline text-uppercase position-absolute overflow-hidden py-0 px-5"
+    >
+      <a
+        class="d-inline-block text-decoration-none text-white"
+        [routerLink]="['home']"
+        >home</a
+      >
+
+      <a
+        class="d-inline-block text-decoration-none text-white"
+        [routerLink]="['events']"
+        >events</a
+      >
+      <a
+        class="d-inline-block text-decoration-none text-white"
+        [routerLink]="['contact']"
+        >contact</a
+      >
+      <a
+        class="d-inline-block text-decoration-none text-white"
+        [routerLink]="['aboutus']"
+        >about us</a
+      >
+      <app-login></app-login>
+      <!-- <a
+        (click)="logout()"
+        *ngIf="logOutLogo"
+        class="d-inline-block text-decoration-none text-white"
+        [routerLink]="['/']"
+        >log out</a
+      > -->
+      <!-- <div class="language-picker-area">
+        <select name="" id="" class="language-picker">
+          <option value="en-US">ENG</option>
+          <option value="ro-RO">RO</option>
+        </select>
+      </div> -->
+    </div>
+  </nav>
+  <div
+    *ngIf="IsMessageVisible"
+    class="nav-subtitle text-nowrap position-absolute text-white"
+  >
+    <h1>la STORIA di Italia</h1>
+    <app-modal></app-modal>
+  </div>
+</div>

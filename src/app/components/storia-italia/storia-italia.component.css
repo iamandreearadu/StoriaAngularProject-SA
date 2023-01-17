@@ -1,0 +1,59 @@
+:root {
+  /*  primary color*/
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+}
+
+* {
+  color: rgba(255, 255, 255, 0.9);
+}
+.section-italia-1 {
+  background-color: rgb(7, 7, 7);
+  padding: 5em 5em;
+}
+
+.section-italia-1,
+h3 {
+  color: rgba(255, 255, 255, 0.9);
+}
+h1 {
+  font-family: papyrus;
+  color: rgb(174, 150, 137);
+}
+.section-menu {
+  height: 26em;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.discover {
+  font-family: papyrus;
+  color: rgb(174, 150, 137);
+}
+
+.our-menu-text {
+  font-style: italic;
+}
+
+button {
+  background-color: rgb(10, 10, 10, 0.5);
+  box-shadow: 1px 1px 2px rgb(174, 150, 137, 0.3);
+}
+.newsletter-container button:hover {
+  background: rgb(174, 150, 137);
+}
+.newsletter-container button:active {
+  transform: scale(1.05);
+  transition: 0.2ms ease-out;
+}
+
+img {
+  height: 26em;
+}
+
+.nostra-storia {
+  padding: 5em 5em;
+  background-color: rgb(7, 7, 7);
+}

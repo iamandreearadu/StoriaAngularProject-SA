@@ -1,0 +1,191 @@
+<div class="form fs-5">
+  <h2 id="registration">Contact Form</h2>
+  <form
+    action=""
+    class="d-flex flex-column p-3"
+    [formGroup]="reactiveForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <label class="d-block pb-2" for="firstname"></label>
+    <input
+      class="input-field w-75 rounded py-2 px-3"
+      type="text"
+      id="firstname"
+      placeholder="First name"
+      formControlName="firstname"
+    />
+    <div
+      *ngIf="
+        !reactiveForm.get('firstname')?.valid &&
+        (reactiveForm.get('firstname')?.touched ||
+          reactiveForm.get('firstname')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!reactiveForm.get('firstname')?.hasError('required')"
+        class="error"
+        aria-live="polite"
+      >
+        First Name is required
+      </small>
+      <small
+        [hidden]="!reactiveForm.get('firstname')?.hasError('pattern')"
+        class="error"
+        aria-live="polite"
+      >
+        Only letters allowed
+      </small>
+    </div>
+
+    <label class="d-block mb-2" for="lastname"></label>
+    <input
+      class="input-field w-75 rounded py-2 px-3"
+      type="text"
+      id="lastname"
+      placeholder="Last name"
+      formControlName="lastname"
+    />
+    <div
+      *ngIf="
+        !reactiveForm.get('lastname')?.valid &&
+        (reactiveForm.get('lastname')?.touched ||
+          reactiveForm.get('lastname')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!reactiveForm.get('lastname')?.hasError('required')"
+        class="error"
+        aria-live="polite"
+      >
+        Last Name is required
+      </small>
+      <small
+        [hidden]="!reactiveForm.get('lastname')?.hasError('pattern')"
+        class="error"
+        aria-live="polite"
+      >
+        Only letters allowed
+      </small>
+    </div>
+
+    <label class="d-block mb-2" for="email"></label>
+    <input
+      class="input-field w-75 rounded py-2 px-3"
+      type="email"
+      id="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <div
+      *ngIf="
+        !reactiveForm.get('email')?.valid && reactiveForm.get('email')?.touched
+      "
+    >
+      <small
+        [hidden]="!reactiveForm.get('email')?.hasError('required')"
+        class="error"
+        aria-live="polite"
+      >
+        Email is required
+      </small>
+      <small
+        [hidden]="!reactiveForm.get('email')?.hasError('email')"
+        class="error"
+        aria-live="polite"
+      >
+        Not an email
+      </small>
+    </div>
+
+    <label class="d-block mb-2" b for="phone"></label>
+    <input
+      class="input-field w-75 rounded py-2 px-3"
+      type="tel"
+      id="phone"
+      placeholder="Phone number"
+      formControlName="phone"
+    />
+    <div
+      class="d-flex flex-column"
+      *ngIf="
+        !reactiveForm.get('phone')?.valid &&
+        (reactiveForm.get('phone')?.touched || reactiveForm.get('phone')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!reactiveForm.get('phone')?.hasError('required')"
+        class="error"
+        aria-live="polite"
+        >Phone is required
+      </small>
+      <small
+        [hidden]="!reactiveForm.get('phone')?.hasError('pattern')"
+        class="error"
+        aria-live="polite"
+        >Not a number
+      </small>
+      <small
+        [hidden]="!reactiveForm.get('phone')?.hasError('minlength')"
+        class="error"
+        aria-live="polite"
+        >Phone number must be at least 8 characters long.
+      </small>
+    </div>
+
+    <label class="d-block mb-2" for="subject"></label>
+    <input
+      class="input-field w-75 rounded py-2 px-3"
+      type="text"
+      id="subject"
+      placeholder="Subject"
+      formControlName="subject"
+    />
+    <div
+      *ngIf="
+        !reactiveForm.get('subject')?.valid &&
+        (reactiveForm.get('subject')?.touched ||
+          reactiveForm.get('subject')?.dirty)
+      "
+    >
+      <small class="error" aria-live="polite"> Subject is required </small>
+    </div>
+
+    <label class="d-block mb-2" for="message"></label>
+    <textarea
+      class="textarea-field input-field w-100 rounded py-2 px-3"
+      type="text"
+      name="message"
+      id="message"
+      placeholder="Your message here..."
+      formControlName="message"
+    ></textarea>
+    <div
+      class="d-flex flex-column"
+      *ngIf="
+        !reactiveForm.get('message')?.valid &&
+        (reactiveForm.get('message')?.touched ||
+          reactiveForm.get('message')?.dirty)
+      "
+    >
+      <small
+        [hidden]="!reactiveForm.get('message')?.hasError('required')"
+        class="error"
+        aria-live="polite"
+      >
+        Message is required
+      </small>
+
+      <small
+        [hidden]="!reactiveForm.get('message')?.hasError('minlength')"
+        class="error"
+        aria-live="polite"
+      >
+        Message must be at least 20 characters long.
+      </small>
+    </div>
+
+    <button type="submit" class="p-2 mt-2 btn" [disabled]="!reactiveForm.valid">
+      Submit
+    </button>
+  </form>
+</div>

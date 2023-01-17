@@ -1,0 +1,44 @@
+:root {
+  /*  primary color*/
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+}
+
+* {
+  background-color: rgb(7, 7, 7);
+  color: rgb(174, 150, 137);
+}
+
+.section-2 h1 {
+  border-top: 1px solid rgb(174, 150, 137);
+  letter-spacing: 5px;
+  padding: 5rem;
+}
+
+.section-2 .storia-italia-locations a img {
+  max-width: 22rem;
+}
+
+.section-2 .storia-italia-locations a .storia-italia-image:hover {
+  box-shadow: 6px 12px 20px 12px rgba(58, 55, 55, 0.253);
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.55);
+}
+
+.section-2 .storia-italia-locations a .storia-italia-image:active {
+  transform: scale(1);
+  transition: all 0.1s ease-out;
+}
+
+/* START MEDIA Q //////////////////////////////*/
+
+@media (max-width: 1115px) {
+  .section-2 {
+    padding: 2rem;
+  }
+  .section-2 .storia-italia-locations a .storia-italia-image {
+    margin: 0.6rem;
+    width: 15rem;
+  }
+}

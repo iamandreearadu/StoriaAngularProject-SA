@@ -1,0 +1,22 @@
+/*  primary color*/
+:root {
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+}
+* {
+  background-color: rgb(7, 7, 7);
+
+  color: rgb(174, 150, 137);
+}
+
+/* START MEDIA Q //////////////////////////////*/
+
+@media (max-width: 815px) {
+  .section-1 {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .section-1 .welcome-message {
+    font-size: 1rem;
+  }
+}

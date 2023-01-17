@@ -1,0 +1,63 @@
+<app-my-button
+  type="button"
+  class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
+  (click)="openModal(template)"
+  [Name]="'LOGIN'"
+  *ngIf="!isLoggedIn"
+>
+</app-my-button>
+
+<app-my-button
+  type="button"
+  class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
+  [Name]="'LOGOUT'"
+  *ngIf="isLoggedIn"
+  (click)="clearStorage()"
+>
+</app-my-button>
+
+<ng-template #template class="modal">
+  <div class="wrapper">
+    <div class="modal-header">
+      <h4 class="modal-title text-center text-white">LOGIN</h4>
+      <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="modalRef?.hide()"
+      >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+
+    <div class="card">
+      <div [hidden]="!isError" class="text-danger">INVALID CREDENTIALS</div>
+      <form [formGroup]="loginForm" action="" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Email</label>
+          <input
+            formControlName="email"
+            type="email"
+            id="InputEmail"
+            class="form-control"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="InputPassword" class="form-label">Password</label>
+          <input
+            formControlName="password"
+            type="password"
+            id="InputPassword"
+            class="form-control"
+            name="password"
+          />
+        </div>
+        <app-my-button
+          class="m-2"
+          type="submit"
+          [Name]="'Submit'"
+        ></app-my-button>
+      </form>
+    </div></div
+></ng-template>

@@ -1,0 +1,54 @@
+:root {
+  /*  primary color*/
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+  --clr-background-2: rgb(7, 7, 7);
+}
+* {
+  /* background-color: rgb(7, 7, 7); */
+}
+
+footer {
+  color: rgb(174, 150, 137);
+  /* background-image: url("../../../assets/jason-leung-poI7DelFiVA-unsplash.jpg"); */
+  background-color: rgb(7, 7, 7);
+}
+
+.links-container .links {
+  padding: 2rem;
+}
+.links-container .links span {
+  color: var(--clr-primary-2);
+}
+.title-footer {
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  font-weight: 1000;
+}
+
+.wrapper-logo {
+  background-image: url("../../../assets/siyuan-g_V2rt6iG7A-unsplash.jpg");
+  background-size: cover;
+  background-position: 70%;
+  padding: 3em 12em;
+}
+
+.container-logo {
+  background-color: rgba(0, 0, 0, 0.87);
+
+  border-top: 1px solid rgb(174, 150, 137);
+  border-bottom: 1px solid rgb(174, 150, 137);
+}
+
+.social-container a:active {
+  color: rgb(174, 150, 137);
+  transform: scale(1.1);
+  transition: all 0.2ms ease-out;
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper-logo {
+    padding: 1em;
+  }
+}

@@ -1,0 +1,25 @@
+<button
+  type="button"
+  class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
+  (click)="openModal(template)"
+>
+  MAKE A RESERVATION
+</button>
+
+<ng-template #template class="modal">
+  <div class="wrapper">
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">MAKE YOUR RESERVATION</h4>
+      <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="modalRef?.hide()"
+      >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+
+    <app-form></app-form>
+  </div>
+</ng-template>

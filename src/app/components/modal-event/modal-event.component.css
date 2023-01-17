@@ -1,0 +1,62 @@
+::ng-deep .modal-content {
+  padding: 2em;
+  border-radius: 25px;
+  background-color: rgba(7, 7, 7, 0.95);
+}
+
+::ng-deep .modal {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+form {
+  padding-top: 1.2em;
+}
+label {
+  width: 6em;
+  color: rgba(255, 255, 255, 0.9);
+}
+input {
+  padding: 0 0.5em;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  width: 10em;
+  background-color: rgba(7, 7, 7, 0.95);
+}
+
+input::placeholder {
+  font-style: italic;
+  font-size: 0.8em;
+  padding: 0 0.5em;
+}
+small {
+  font-size: 12px;
+  margin-left: 11em;
+}
+
+h3 {
+  font-family: papyrus;
+  color: rgb(174, 150, 137);
+}
+
+button.book {
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: rgb(10, 10, 10, 0.5);
+  box-shadow: 1px 1px 2px rgb(174, 150, 137, 0.3);
+}
+
+button.book:hover {
+  background: rgb(174, 150, 137);
+}
+
+button.book:active {
+  transform: scale(1.05);
+  transition: 0.2ms ease-out;
+}
+button.book:disabled {
+  border: none;
+  transform: none;
+  transition: none;
+  background-color: rgb(20, 20, 20);
+}

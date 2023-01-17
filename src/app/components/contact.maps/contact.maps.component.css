@@ -1,0 +1,53 @@
+* {
+  background-color: rgb(7, 7, 7);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.maps .map p {
+  color: rgba(255, 255, 255, 0.9);
+}
+.maps .map p span {
+  font-weight: 600;
+  font-size: larger;
+  font-style: italic;
+}
+
+.maps .map iframe {
+  max-width: 24em;
+  height: 16em;
+  border-radius: 2px;
+}
+
+/* START MEDIA QUERY*/
+@media (max-width: 1150px) {
+  /* .maps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .maps .map {
+    flex-direction: column;
+
+    padding: 0;
+  } 
+  .maps .map iframe {
+    align-items: center;
+    width: 30em;
+    height: 18em;
+  }
+}
+@media (max-width: 650px) {
+  .maps .map iframe {
+    align-items: center;
+    width: 21em;
+    height: 15em;
+  }
+}
+
+@media (max-width: 390px) {
+  .maps .map iframe {
+    align-items: center;
+    width: 16em;
+    height: 12em;
+  }*/
+}

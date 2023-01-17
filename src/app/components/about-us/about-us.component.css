@@ -1,0 +1,19 @@
+* {
+  background-color: rgb(7, 7, 7);
+  color: rgba(255, 255, 255, 0.9);
+}
+h2 {
+  color: rgb(174, 150, 137);
+}
+.nav-container-about {
+  height: 450px;
+  background-image: url("/Resources/rest3.jpg");
+  background-position: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#nav {
+  height: 450px;
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+:root {
+  /*  primary color*/
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+  --clr-background-2: rgb(7, 7, 7);
+}
+* {
+  /* background-color: rgb(7, 7, 7); */
+
+  color: rgb(174, 150, 137);
+}
+
+.newsletter-container {
+  background-image: url("../../../assets/jason-leung-poI7DelFiVA-unsplash.jpg");
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.newsletter-container .newsletter-email-input {
+  outline: none;
+  color: var(--clr-primary-1);
+  box-shadow: 1px 1px 2px rgb(174, 150, 137, 0.3);
+  background-color: rgb(10, 10, 10, 0.5);
+}
+
+.newsletter-container .newsletter-email-input::placeholder {
+  font-style: oblique;
+}
+.newsletter-container button {
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: rgb(10, 10, 10, 0.5);
+  box-shadow: 1px 1px 2px rgb(174, 150, 137, 0.3);
+}
+
+.newsletter-container button:hover {
+  background: var(--clr-primary-2);
+}
+.newsletter-container button:active {
+  transform: scale(1.05);
+  transition: 0.2ms ease-out;
+}

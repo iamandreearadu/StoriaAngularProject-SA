@@ -1,0 +1,36 @@
+:root {
+  /*  primary color*/
+  --clr-primary-1: rgba(255, 255, 255, 0.9);
+  --clr-primary-2: rgb(174, 150, 137);
+  --clr-background: rgb(14, 14, 14);
+}
+* {
+  background-color: rgb(7, 7, 7);
+  color: rgb(174, 150, 137);
+}
+.section-3 h1 {
+  border-top: 1px solid rgb(174, 150, 137);
+  letter-spacing: 5px;
+  padding: 5rem;
+}
+.section-3 p {
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
+.section-3 .section-3-partners-container {
+  padding-bottom: 5rem;
+}
+
+.section-3 .section-3-partners-container .partner-image {
+  max-width: 10rem;
+  background-color: rgb(174, 150, 137);
+  box-shadow: 3px 3px 10px 3px rgb(174, 150, 137);
+}
+
+/* START MEDIA Q //////////////////////////////*/
+
+@media (max-width: 1115px) {
+  .section-3 .section-3-partners-container .partner-image {
+    width: 8rem;
+  }
+}

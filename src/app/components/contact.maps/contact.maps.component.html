@@ -1,0 +1,23 @@
+<div class="maps row justify-content-center">
+  <div
+    class="map col-xs-12 col-sm-12 col-md-6 col-lg-4 text-center y-5 p-3"
+    *ngFor="let map of maps"
+  >
+    <p class="d-block text-nowrap">
+      <span> {{ map.name }} </span> <br />
+      {{ map.address }}<br />
+      {{ map.tel }}<br />
+      {{ map.email }}
+    </p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.527492317867!2d24.148514550642464!3d45.800693218846405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474c6795d4a07b1b%3A0x4697dd7522478145!2sMax!5e0!3m2!1sro!2sro!4v1665472240811!5m2!1sro!2sro"
+      width="450"
+      height="400"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
