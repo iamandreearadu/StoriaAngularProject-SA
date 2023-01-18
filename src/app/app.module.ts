@@ -13,27 +13,26 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/header/navbar/navbar.component';
+import { FooterComponent } from './components/footer-fn/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { FormComponent } from './components/form/form.component';
-import { StoriaItaliaComponent } from './components/storia-italia/storia-italia.component';
-import { StoriaCaffeComponent } from './components/storia-caffe/storia-caffe.component';
-import { StoriaEventsComponent } from './components/storia-events/storia-events.component';
-import { HomeComponent } from './components/home/home.component';
+import { FormComponent } from './components/header/form/form.component';
+import { StoriaItaliaComponent } from './components/locations/storia-italia/storia-italia.component';
+import { StoriaCaffeComponent } from './components/locations/storia-caffe/storia-caffe.component';
+import { StoriaEventsComponent } from './components/locations/storia-events/storia-events.component';
+import { HomeComponent } from './components/home.section1/home.component';
 import { HomeSection2Component } from './components/home.section2/home.section2.component';
 import { HomeSection3Component } from './components/home.section3/home.section3.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ContactMapsComponent } from './components/contact.maps/contact.maps.component';
-import { TitleComponent } from './components/title/title.component';
 import { EventsComponent } from './components/events/events.component';
-import { ModalComponent } from './components/modal/modal.component';
+import { ModalComponent } from './components/header/modal/modal.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { NewsletterComponent } from './components/footer-fn/newsletter/newsletter.component';
 import { MyButtonComponent } from './shared/my-button/my-button.component';
 import { ModalEventComponent } from './components/modal-event/modal-event.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/header/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
@@ -51,7 +50,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     HomeSection3Component,
     ContactFormComponent,
     ContactMapsComponent,
-    TitleComponent,
+
     EventsComponent,
     ModalComponent,
     CarouselComponent,

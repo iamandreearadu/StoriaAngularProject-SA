@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { HomeComponent } from './components/home/home.component';
-import { StoriaCaffeComponent } from './components/storia-caffe/storia-caffe.component';
-import { StoriaEventsComponent } from './components/storia-events/storia-events.component';
-import { StoriaItaliaComponent } from './components/storia-italia/storia-italia.component';
+import { HomeComponent } from './components/home.section1/home.component';
+import { StoriaCaffeComponent } from './components/locations/storia-caffe/storia-caffe.component';
+import { StoriaEventsComponent } from './components/locations/storia-events/storia-events.component';
+import { StoriaItaliaComponent } from './components/locations/storia-italia/storia-italia.component';
 import { EventsComponent } from './components/events/events.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/header/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { GuardService } from './services/guard.service';
 
