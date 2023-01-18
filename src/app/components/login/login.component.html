@@ -1,25 +1,25 @@
-<app-my-button
+<a
   type="button"
-  class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
+  class="btn-reservation text-decoration-none w-auto text-uppercase text-white border-0 py-2 px-4"
   (click)="openModal(template)"
-  [Name]="'LOGIN'"
   *ngIf="!isLoggedIn"
->
-</app-my-button>
+  >LOGIN
+</a>
 
-<app-my-button
+<a
   type="button"
-  class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
-  [Name]="'LOGOUT'"
+  class="btn-reservation text-decoration-none w-auto text-uppercase text-white border-0 py-2 px-4"
   *ngIf="isLoggedIn"
   (click)="clearStorage()"
->
-</app-my-button>
+  >LOGOUT
+</a>
 
 <ng-template #template class="modal">
   <div class="wrapper">
     <div class="modal-header">
-      <h4 class="modal-title text-center text-white">LOGIN</h4>
+      <h4 class="modal-title text-center text-white">
+        {{ "login.login" | translate }}
+      </h4>
       <button
         type="button"
         class="btn-close close pull-right"
@@ -30,11 +30,13 @@
       </button>
     </div>
 
-    <div class="card">
+    <div class="card m-4">
       <div [hidden]="!isError" class="text-danger">INVALID CREDENTIALS</div>
       <form [formGroup]="loginForm" action="" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-          <label for="InputEmail" class="form-label">Email</label>
+          <label for="InputEmail" class="form-label">
+            {{ "login.email" | translate }}</label
+          >
           <input
             formControlName="email"
             type="email"
@@ -44,7 +46,9 @@
           />
         </div>
         <div class="mb-3">
-          <label for="InputPassword" class="form-label">Password</label>
+          <label for="InputPassword" class="form-label">
+            {{ "login.password" | translate }}</label
+          >
           <input
             formControlName="password"
             type="password"
@@ -56,7 +60,7 @@
         <app-my-button
           class="m-2"
           type="submit"
-          [Name]="'Submit'"
+          [name]="'Submit'"
         ></app-my-button>
       </form>
     </div></div

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,6 +9,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -33,7 +35,6 @@ import { MyButtonComponent } from './shared/my-button/my-button.component';
 import { ModalEventComponent } from './components/modal-event/modal-event.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,15 @@ import { TranslateModule } from '@ngx-translate/core';
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
     FontAwesomeModule,
-    TranslateModule.forRoot({ defaultLanguage: 'en' }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+        },
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,7 @@
 <div class="form fs-5">
-  <h2 id="registration">Contact Form</h2>
+  <h2 id="registration">
+    {{ "contact.formContact.contactForm" | translate }}
+  </h2>
   <form
     action=""
     class="d-flex flex-column p-3"
@@ -11,7 +13,7 @@
       class="input-field w-75 rounded py-2 px-3"
       type="text"
       id="firstname"
-      placeholder="First name"
+      placeholder=" {{ 'contact.formContact.firstName' | translate }}"
       formControlName="firstname"
     />
     <div
@@ -23,17 +25,17 @@
     >
       <small
         [hidden]="!reactiveForm.get('firstname')?.hasError('required')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        First Name is required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!reactiveForm.get('firstname')?.hasError('pattern')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Only letters allowed
+        {{ "validations.onlyLetters" | translate }}
       </small>
     </div>
 
@@ -42,7 +44,7 @@
       class="input-field w-75 rounded py-2 px-3"
       type="text"
       id="lastname"
-      placeholder="Last name"
+      placeholder=" {{ 'contact.formContact.lastName' | translate }}"
       formControlName="lastname"
     />
     <div
@@ -54,17 +56,17 @@
     >
       <small
         [hidden]="!reactiveForm.get('lastname')?.hasError('required')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Last Name is required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!reactiveForm.get('lastname')?.hasError('pattern')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Only letters allowed
+        {{ "validations.onlyLetters" | translate }}
       </small>
     </div>
 
@@ -83,17 +85,17 @@
     >
       <small
         [hidden]="!reactiveForm.get('email')?.hasError('required')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Email is required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!reactiveForm.get('email')?.hasError('email')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Not an email
+        {{ "validations.notEmail" | translate }}
       </small>
     </div>
 
@@ -102,11 +104,10 @@
       class="input-field w-75 rounded py-2 px-3"
       type="tel"
       id="phone"
-      placeholder="Phone number"
+      placeholder=" {{ 'contact.formContact.phoneNumber' | translate }}"
       formControlName="phone"
     />
     <div
-      class="d-flex flex-column"
       *ngIf="
         !reactiveForm.get('phone')?.valid &&
         (reactiveForm.get('phone')?.touched || reactiveForm.get('phone')?.dirty)
@@ -114,21 +115,24 @@
     >
       <small
         [hidden]="!reactiveForm.get('phone')?.hasError('required')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
-        >Phone is required
+      >
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!reactiveForm.get('phone')?.hasError('pattern')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
-        >Not a number
+      >
+        {{ "validations.onlyNumbers" | translate }}
       </small>
       <small
         [hidden]="!reactiveForm.get('phone')?.hasError('minlength')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
-        >Phone number must be at least 8 characters long.
+      >
+        {{ "validations.charactersLong" | translate }}
       </small>
     </div>
 
@@ -137,7 +141,7 @@
       class="input-field w-75 rounded py-2 px-3"
       type="text"
       id="subject"
-      placeholder="Subject"
+      placeholder=" {{ 'contact.formContact.subject' | translate }}"
       formControlName="subject"
     />
     <div
@@ -147,7 +151,9 @@
           reactiveForm.get('subject')?.dirty)
       "
     >
-      <small class="error" aria-live="polite"> Subject is required </small>
+      <small class="error pull-left" aria-live="polite">
+        {{ "validations.fieldRequired" | translate }}
+      </small>
     </div>
 
     <label class="d-block mb-2" for="message"></label>
@@ -156,11 +162,10 @@
       type="text"
       name="message"
       id="message"
-      placeholder="Your message here..."
+      placeholder=" {{ 'contact.formContact.messageHere' | translate }}"
       formControlName="message"
     ></textarea>
     <div
-      class="d-flex flex-column"
       *ngIf="
         !reactiveForm.get('message')?.valid &&
         (reactiveForm.get('message')?.touched ||
@@ -169,23 +174,23 @@
     >
       <small
         [hidden]="!reactiveForm.get('message')?.hasError('required')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Message is required
+        {{ "validations.fieldRequired" | translate }}
       </small>
 
       <small
         [hidden]="!reactiveForm.get('message')?.hasError('minlength')"
-        class="error"
+        class="error pull-left"
         aria-live="polite"
       >
-        Message must be at least 20 characters long.
+        {{ "validations.charactersLong20" | translate }}
       </small>
     </div>
 
     <button type="submit" class="p-2 mt-2 btn" [disabled]="!reactiveForm.valid">
-      Submit
+      {{ "contact.formContact.submit" | translate }}
     </button>
   </form>
 </div>

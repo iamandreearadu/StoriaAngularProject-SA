@@ -2,7 +2,7 @@
   type="button"
   class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
   (click)="openModal(template)"
-  [Name]="'Book now'"
+  [name]="'Book now'"
 >
 </app-my-button>
 
@@ -10,10 +10,10 @@
   <div class="wrapper">
     <div class="modal-header">
       <h4 class="modal-title pull-left text-white" *ngIf="textShow">
-        Book your favourite event
+        {{ "events.modalBookEvent.title" | translate }}
       </h4>
       <h4 class="modal-title text-center text-white" *ngIf="!textShow">
-        Congratulations!
+        {{ "events.modalBookEvent.congrats" | translate }}
       </h4>
       <button
         type="button"
@@ -33,12 +33,14 @@
         (ngSubmit)="onSubmit()"
       >
         <div class="d-flex ms-2 mt-2">
-          <label for="fullname" class="d-block p-2">Fullname</label>
+          <label for="fullname" class="d-block p-2">
+            {{ "events.modalBookEvent.fullname" | translate }}</label
+          >
           <input
             id="fullname"
             type="text"
             class="input-field w-50 rounded"
-            placeholder="your fullname here..."
+            placeholder="{{ 'events.modalBookEvent.yourfullname' | translate }}"
             formControlName="fullname"
           />
         </div>
@@ -54,23 +56,25 @@
             class="error text-danger"
             aria-live="polite"
           >
-            Field required
+            {{ "validations.fieldRequired" | translate }}
           </small>
           <small
             [hidden]="!eventForm.get('fullname')?.hasError('pattern')"
             class="error text-danger"
             aria-live="polite"
           >
-            Only letters allowed
+            {{ "validations.onlyNumbers" | translate }}
           </small>
         </div>
         <div class="d-flex ms-2 mt-2">
-          <label for="age" class="d-block p-2">Age</label>
+          <label for="age" class="d-block p-2">
+            {{ "events.modalBookEvent.age" | translate }}</label
+          >
           <input
             id="age"
             type="text"
             class="input-field w-50 rounded"
-            placeholder="your age here..."
+            placeholder="{{ 'events.modalBookEvent.yourage' | translate }}"
             formControlName="age"
           />
         </div>
@@ -86,23 +90,25 @@
             class="error text-danger"
             aria-live="polite"
           >
-            Field required
+            {{ "validations.fieldRequired" | translate }}
           </small>
           <small
             [hidden]="!eventForm.get('age')?.hasError('pattern')"
             class="error text-danger"
             aria-live="polite"
           >
-            Only numbers allowed
+            {{ "validations.onlyNumbers" | translate }}
           </small>
         </div>
         <div class="d-flex ms-2 mt-2">
-          <label for="phone" class="d-block p-2">Phone</label>
+          <label for="phone" class="d-block p-2">
+            {{ "events.modalBookEvent.phone" | translate }}</label
+          >
           <input
             id="phone"
             type="text"
             class="input-field w-50 rounded"
-            placeholder="your phone here..."
+            placeholder="{{ 'events.modalBookEvent.yourphone' | translate }}"
             formControlName="phone"
           />
         </div>
@@ -118,21 +124,21 @@
             class="error text-danger"
             aria-live="polite"
           >
-            Field required
+            {{ "validations.fieldRequired" | translate }}
           </small>
           <small
             [hidden]="!eventForm.get('phone')?.hasError('pattern')"
             class="error text-danger"
             aria-live="polite"
           >
-            Only numbers allowed
+            {{ "validations.onlyNumbers" | translate }}
           </small>
           <small
             [hidden]="!eventForm.get('phone')?.hasError('minlength')"
             class="error text-danger"
             aria-live="polite"
           >
-            Phone number must be at least 8 characters long.
+            {{ "validations.charactersLong" | translate }}
           </small>
         </div>
 
@@ -141,13 +147,13 @@
           type="submit"
           [disabled]="!eventForm.valid"
         >
-          BOOK
+          {{ "events.modalBookEvent.bookBtn" | translate }}
         </button>
       </form>
     </div>
     <h3 *ngIf="!textShow" class="text-center p-3">
       <br />
-      You have successfully booked a ticket
+      {{ "events.modalBookEvent.successBooked" | translate }}
     </h3>
   </div>
 </ng-template>

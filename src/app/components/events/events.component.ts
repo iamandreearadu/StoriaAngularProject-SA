@@ -1,46 +1,46 @@
-import { Component, EnvironmentInjector, OnInit } from "@angular/core";
-import { EventsService } from "src/app/components/Services/events.service";
-import { HttpClient } from "@angular/common/http";
-import { AuthService } from "../Services/auth.service";
+import { Component, EnvironmentInjector, OnInit } from '@angular/core';
+import { EventsService } from 'src/app/services/events.service';
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: "app-events",
-  templateUrl: "./events.component.html",
-  styleUrls: ["./events.component.css"],
+  selector: 'app-events',
+  templateUrl: './events.component.html',
+  styleUrls: ['./events.component.css'],
 })
 export class EventsComponent implements OnInit {
   myEvents: any = [];
-  isNotFree: boolean = true;
+
   showAddEventButton: boolean = false;
   toDisplayForm = false;
 
   public images: Array<any> = [
     {
-      image: "https://source.unsplash.com/random/?wine",
+      image: 'https://source.unsplash.com/random/?wine',
     },
     {
-      image: "https://source.unsplash.com/random/?italia",
+      image: 'https://source.unsplash.com/random/?italia',
     },
     {
-      image: "https://source.unsplash.com/random/?jazz",
+      image: 'https://source.unsplash.com/random/?jazz',
     },
     {
-      image: "https://source.unsplash.com/random/?coffee",
+      image: 'https://source.unsplash.com/random/?coffee',
     },
     {
-      image: "https://source.unsplash.com/random/?cafe",
+      image: 'https://source.unsplash.com/random/?cafe',
     },
     {
-      image: "https://source.unsplash.com/random/?business",
+      image: 'https://source.unsplash.com/random/?business',
     },
     {
-      image: "https://source.unsplash.com/random/?bohemian",
+      image: 'https://source.unsplash.com/random/?bohemian',
     },
     {
-      image: "https://source.unsplash.com/random/?party",
+      image: 'https://source.unsplash.com/random/?party',
     },
     {
-      image: "https://source.unsplash.com/random/?book",
+      image: 'https://source.unsplash.com/random/?book',
     },
   ];
 
@@ -57,22 +57,15 @@ export class EventsComponent implements OnInit {
   }
 
   getEvents() {
-    this.events.getData().subscribe((data) => {
+    this.events.getEvent().subscribe((data) => {
       console.log(data);
       this.myEvents = data;
     });
   }
   showAddButton() {
-    // this.showAddEventButton = false;
-    // if (this.authServ.isLoggedIn()) {
-    //   this.showAddEventButton = true;
-    // } else {
-    //   this.showAddEventButton = false;
-    // }
-
-    let token = this.authServ.getData();
+    let token = this.authServ.getToken();
     console.log(token);
-    if (this.authServ.getData()) {
+    if (this.authServ.getToken() === 'ADMIN') {
       this.showAddEventButton = true;
     } else {
       this.showAddEventButton = false;

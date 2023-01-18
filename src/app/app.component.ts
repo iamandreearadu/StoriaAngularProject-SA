@@ -9,8 +9,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'Storia-Project-Angular';
 
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+  languages = ['en', 'ro'];
+
+  constructor(private translateServ: TranslateService) {}
+
+  ngOnInit() {
+    //  this.translateServ.setDefaultLang('en');
+    this.translateServ.use('en');
   }
 }

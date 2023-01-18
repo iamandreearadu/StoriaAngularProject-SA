@@ -1,7 +1,9 @@
 <div class="form fs-5 p-3">
   <div class="d-flex p-3">
     <select class="form-select mx-3" aria-label="Default select example">
-      <option selected>Choose location</option>
+      <option class="text-capitalize" selected>
+        {{ "home.reservationForm.chooseLocation" | translate }}
+      </option>
       <option value="1">Storia Italia</option>
       <option value="2">Storia Caffe</option>
       <option value="3">Storia Events</option>
@@ -11,7 +13,7 @@
       <div class="col-xs-12 col-12 col-md-4 form-group mb-3 date-input">
         <input
           type="text"
-          placeholder="Datepicker"
+          placeholder="Date"
           class="form-control"
           bsDatepicker
         />
@@ -22,7 +24,9 @@
       class="form-select select-time px-2 rounded mx-3"
       aria-label="Default select example"
     >
-      <option selected>Time</option>
+      <option class="text-capitalize" selected>
+        {{ "home.reservationForm.time" | translate }}
+      </option>
       <option value="1">15</option>
       <option value="2">16</option>
       <option value="3">17</option>
@@ -41,7 +45,9 @@
     (ngSubmit)="onSubmit()"
   >
     <div class="d-flex ms-2 mt-2">
-      <label for="fullname" class="d-block p-2">Fullname</label>
+      <label for="fullname" class="d-block p-2">
+        {{ "home.reservationForm.fullname" | translate }}</label
+      >
       <input
         id="fullname"
         type="text"
@@ -61,18 +67,20 @@
         class="error text-danger"
         aria-live="polite"
       >
-        Field required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!modalForm.get('fullname')?.hasError('pattern')"
         class="error text-danger"
         aria-live="polite"
       >
-        Only letters allowed
+        {{ "validations.onlyLetters" | translate }}
       </small>
     </div>
     <div class="d-flex ms-2 mt-2">
-      <label for="age" class="d-block p-2">Age</label>
+      <label for="age" class="d-block p-2">
+        {{ "home.reservationForm.age" | translate }}</label
+      >
       <input
         id="age"
         type="text"
@@ -93,18 +101,20 @@
         class="error text-danger"
         aria-live="polite"
       >
-        Field required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!modalForm.get('age')?.hasError('pattern')"
         class="error text-danger"
         aria-live="polite"
       >
-        Only numbers allowed
+        {{ "validations.onlyNumbers" | translate }}
       </small>
     </div>
     <div class="d-flex ms-2 mt-2">
-      <label for="phone" class="d-block p-2">Phone</label>
+      <label for="phone" class="d-block p-2">
+        {{ "home.reservationForm.phone" | translate }}</label
+      >
       <input
         id="phone"
         type="text"
@@ -125,25 +135,27 @@
         class="error text-danger"
         aria-live="polite"
       >
-        Field required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!modalForm.get('phone')?.hasError('pattern')"
         class="error text-danger"
         aria-live="polite"
       >
-        Only numbers allowed
+        {{ "validations.onlyNumbers" | translate }}
       </small>
       <small
         [hidden]="!modalForm.get('phone')?.hasError('minlength')"
         class="error text-danger"
         aria-live="polite"
       >
-        Phone number must be at least 8 characters long.
+        {{ "validations.charactersLong" | translate }}
       </small>
     </div>
     <div class="d-flex ms-2 mt-2">
-      <label for="persons" class="d-block p-2">Persons</label>
+      <label for="persons" class="d-block p-2">
+        {{ "home.reservationForm.persons" | translate }}</label
+      >
       <input
         id="persons"
         type="text"
@@ -163,17 +175,17 @@
         class="error text-danger"
         aria-live="polite"
       >
-        Field required
+        {{ "validations.fieldRequired" | translate }}
       </small>
       <small
         [hidden]="!modalForm.get('persons')?.hasError('pattern')"
         class="error text-danger"
         aria-live="polite"
       >
-        Only numbers allowed
+        {{ "validations.onlyNumbers" | translate }}
       </small>
     </div>
 
-    <app-my-button class="m-2" type="submit" [Name]="'Submit'"></app-my-button>
+    <app-my-button class="m-2" type="submit" [name]="'Submit'"></app-my-button>
   </form>
 </div>

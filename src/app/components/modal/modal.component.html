@@ -3,13 +3,15 @@
   class="btn-reservation w-auto text-uppercase text-white border-0 py-2 px-4"
   (click)="openModal(template)"
 >
-  MAKE A RESERVATION
+  {{ "home.navbar.reservationBtn" | translate }}
 </button>
 
 <ng-template #template class="modal">
   <div class="wrapper">
     <div class="modal-header">
-      <h4 class="modal-title pull-left">MAKE YOUR RESERVATION</h4>
+      <h4 class="modal-title text-uppercase pull-left">
+        {{ "home.reservationForm.title" | translate }}
+      </h4>
       <button
         type="button"
         class="btn-close close pull-right"

@@ -9,7 +9,7 @@ import { StoriaItaliaComponent } from './components/storia-italia/storia-italia.
 import { EventsComponent } from './components/events/events.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { GuardService } from './components/Services/guard.service';
+import { GuardService } from './services/guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'storiaevents', component: StoriaEventsComponent },
   { path: 'events', component: EventsComponent, canActivate: [GuardService] },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
 @NgModule({

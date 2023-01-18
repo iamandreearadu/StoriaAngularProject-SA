@@ -149,6 +149,9 @@ a:active {
     padding-left: 2rem;
   }
 
+  .login {
+    padding: 8px;
+  }
   .nav > #nav-check:checked ~ .nav-links {
     height: auto;
     overflow-y: hidden;

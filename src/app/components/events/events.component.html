@@ -1,79 +1,106 @@
 <section class="wrapperr">
   <h1 class="text-center mb-5">
-    Book now for your favorite event!
+    {{ "events.firstS" | translate }}
     <br />
-    We have prepared the most exclusive events for you in all our locations
+    {{ "events.secondS" | translate }}
   </h1>
-  <div class="text-center m-4" *ngIf="!showAddEventButton">
-    <app-my-button
-      class="p-2"
-      [Name]="'NEW EVENT'"
-      (click)="showForm()"
-    ></app-my-button>
+  <div class="text-center m-4" *ngIf="showAddEventButton">
+    <button class="btn text-white bg-transparent p-2" (click)="showForm()">
+      {{ "events.addEvent" | translate }}
+    </button>
   </div>
 
   <div class="form-area container" *ngIf="toDisplayForm">
-    <h4 class="text-white text-uppercase">create event</h4>
     <form #eventForm="ngForm" (ngSubmit)="onCreateEvent(eventForm.value)">
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >location</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.location" | translate }}</label
         >
         <input type="text" name="location" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >event</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.event" | translate }}</label
         >
         <input type="text" name="event" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >guest</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.guest" | translate }}</label
         >
         <input type="text" name="guest" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >date</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.date" | translate }}</label
         >
         <input type="text" name="date" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >hour</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.hour" | translate }}</label
         >
         <input type="text" name="hour" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >duration</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.duration" | translate }}</label
         >
         <input type="text" name="duration" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >price</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.price" | translate }}</label
         >
         <input type="text" name="price" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >free (true/ false)</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.free" | translate }}</label
         >
         <input type="text" name="free" ngModel />
       </div>
       <div class="d-flex flex-row mb-2">
-        <label class="text-white text-capitalize create-event-form-label" for=""
-          >phone number</label
+        <label
+          class="text-white text-capitalize create-event-form-label"
+          for=""
+        >
+          {{ "events.formAddEvent.phone" | translate }}</label
         >
         <input type="text" name="phone" ngModel />
       </div>
-      <input
+      <!-- <input
         class="create-event-submit-input text-capitalize p-3"
         type="submit"
-        value="add product"
-      />
+        value="ADD"
+      /> -->
+      <button class="btn p-2 text-white text-capitalize p-3" type="submit">
+        {{ "events.addEvent" | translate }}
+      </button>
     </form>
   </div>
   <div class="row card-container justify-content-center">
@@ -99,14 +126,14 @@
             <span>{{ data.hour }}</span>
           </h6>
           <h6 class="my-0 text-white d-block">RSVP: {{ data.tel }}</h6>
-          <div class="price-container d-flex pt-2" *ngIf="isNotFree">
-            <h4 class="me-2">Price</h4>
+          <div class="price-container d-flex pt-2">
+            <h4 class="me-2">{{ "events.formAddEvent.price" | translate }}</h4>
             <h4 class="price">{{ data.price }} Lei</h4>
           </div>
           <!-- <h5>{{ data.duration }}</h5> -->
           <div class="guest-price-data p-1 mt-3">
             <h5 class="special-guest text-center pull-center mt-3">
-              SPECIAL GUEST
+              {{ "events.specialGuest" | translate }}
             </h5>
             <h3
               class="guest text-center font-weight-bold pull-center py-1 px-5"
@@ -119,9 +146,9 @@
         <div class="media">
           <div class="media-body pull-right text-right">
             <app-my-button
-              *ngIf="!showAddEventButton"
+              *ngIf="showAddEventButton"
               class="p-2 text-danger"
-              [Name]="'DEL'"
+              [name]="'DEL'"
               (click)="onDeleteEvent(data._id)"
             ></app-my-button>
 

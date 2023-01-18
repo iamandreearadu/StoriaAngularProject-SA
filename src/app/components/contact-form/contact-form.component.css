@@ -11,8 +11,8 @@ textarea.ng-invalid.ng-touched {
 }
 .error {
   color: rgb(145, 22, 22);
-  border: none;
-  outline: none;
+  /* border: none;
+  outline: none; */
 }
 form {
   padding: 12rem;

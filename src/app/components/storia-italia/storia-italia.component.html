@@ -1,6 +1,6 @@
 <section class="section-italia-1 d-flex">
   <div class="special-text text-center">
-    <h5 class="text-uppercase">Specialty of the Month</h5>
+    <h5 class="text-uppercase">{{ "storiaItalia.specialty" | translate }}</h5>
     <h1>Bistecca Alla Fiorentina</h1>
     <p class="mt-5">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat delectus
@@ -30,15 +30,18 @@
         style="display: block; width: 100%"
       />
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="discover">Discover</h3>
-        <h2 class="our-menu text-uppercase">menu storia italia</h2>
+        <h3 class="discover">
+          {{ "storiaItalia.discover" | translate }}
+        </h3>
+        <h2 class="our-menu text-uppercase">
+          {{ "storiaItalia.menuStoria" | translate }}
+        </h2>
         <p class="our-menu-text font-italic">
-          Elegance is the "ingredient" found both in our menu and in the
-          atmosphere of the location.<br />
-          We are waiting for you to discover it!
+          {{ "storiaItalia.textMenu1" | translate }} <br />
+          {{ "storiaItalia.textMenu2" | translate }}
         </p>
         <a href="../../../assets/menu.pdf">
-          <app-my-button [Name]="'Open Menu'" [Style]="''"> </app-my-button
+          <app-my-button [name]="'Menu'"> </app-my-button
         ></a>
       </div>
     </section>
@@ -50,18 +53,19 @@
       style="display: block; width: 100%"
     />
     <div class="carousel-caption d-none d-md-block">
-      <h3 class="discover">Discover</h3>
-      <h2 class="our-menu text-uppercase">menu storia italia</h2>
+      <h3 class="discover">{{ "storiaItalia.discover" | translate }}</h3>
+      <h2 class="our-menu text-uppercase">
+        {{ "storiaItalia.menuStoria" | translate }}
+      </h2>
       <p class="our-menu-text font-italic">
-        Elegance is the "ingredient" found both in our menu and in the
-        atmosphere of the location.<br />
-        We are waiting for you to discover it!
+        {{ "storiaItalia.textMenu1" | translate }} <br />
+        {{ "storiaItalia.textMenu2" | translate }}
       </p>
       <!-- <a href="../../../assets/menu.pdf">
         <button class="btn">Open Menu</button></a
       > -->
       <a href="../../../assets/menu.pdf">
-        <app-my-button [Name]="'Open Menu'" [Style]="''"> </app-my-button
+        <app-my-button [name]="'Menu'"> </app-my-button
       ></a>
     </div>
   </slide>
@@ -72,21 +76,24 @@
       style="display: block; width: 100%"
     />
     <div class="carousel-caption d-none d-md-block">
-      <h3 class="discover">Discover</h3>
-      <h2 class="our-menu text-uppercase">menu storia italia</h2>
+      <h3 class="discover">{{ "storiaItalia.discover" | translate }}</h3>
+      <h2 class="our-menu text-uppercase">
+        {{ "storiaItalia.menuStoria" | translate }}
+      </h2>
       <p class="our-menu-text font-italic">
-        Elegance is the "ingredient" found both in our menu and in the
-        atmosphere of the location.<br />
-        We are waiting for you to discover it!
+        {{ "storiaItalia.textMenu1" | translate }} <br />
+        {{ "storiaItalia.textMenu2" | translate }}
       </p>
       <a href="../../../assets/menu.pdf">
-        <app-my-button [Name]="'Open Menu'" [Style]="''"> </app-my-button
+        <app-my-button [name]="'Menu'"> </app-my-button
       ></a>
     </div>
   </slide>
 </carousel>
 <div class="nostra-storia">
-  <h1 class="text-center mt-5 text-capitalize">La nostra storia</h1>
+  <h1 class="text-center mt-5 text-capitalize">
+    {{ "storiaItalia.ourStory" | translate }}
+  </h1>
   <p class="text-center mt-5">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sit
     suscipit provident perferendis labore? Porro ad ratione nesciunt pariatur

@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class MyButtonComponent {
   @Input()
-  public Name: string = '';
+  public name: string = '';
 
   @Input()
-  public Style: string = '';
+  public style: string = '';
 }

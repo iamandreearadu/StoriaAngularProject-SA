@@ -3,7 +3,9 @@
     <div
       class="links d-flex flex-column text-center justify-content-center col-lg-12"
     >
-      <h6 class="title-footer p-1">Locations</h6>
+      <h6 class="title-footer text-capitalize p-1">
+        {{ "footer.locations" | translate }}
+      </h6>
 
       <span class="p-1">Storia Italia - Str. Lorem nr 1</span> <br />
       <span class="p-1">Storia Caffe - Str. Lorem nr 2</span> <br />
@@ -12,14 +14,21 @@
     <div
       class="links d-flex flex-column text-center justify-content-center col-lg-12"
     >
-      <h6 class="title-footer p-1">Open</h6>
-      <span class="p-2"
-        >Monday - Thursday: 9AM - 23PM <br />Friday - Sunday: 10AM - 2AM</span
+      <h6 class="title-footer text-capitalize p-1">
+        {{ "footer.open" | translate }}
+      </h6>
+      <span class="p-2">
+        {{ "footer.monday" | translate }} -
+        {{ "footer.thursday" | translate }} : 9AM - 23PM <br />{{
+          "footer.friday" | translate
+        }}
+        - {{ "footer.sunday" | translate }}: 10AM - 2AM</span
       >
-      <span class="p-2"
-        >Monday - Friday: 7AM - 18PM <br />Weekend: 9AM - 15PM</span
+      <span class="p-2">
+        {{ "footer.monday" | translate }} - {{ "footer.friday" | translate }}:
+        7AM - 18PM <br />Weekend: 9AM - 15PM</span
       >
-      <span class="p-2">For events only</span>
+      <span class="p-2"> {{ "footer.eventsOnly" | translate }}</span>
     </div>
   </div>
 
@@ -58,6 +67,9 @@
   </div>
 
   <div class="copyright text-center fs-8 pb-1">
-    Copyright © STORIA 2022 | ALL RIGHTS RESERVED
+    Copyright © STORIA 2022 |
+    <span class="text-uppercase">{{
+      "footer.rightsReserved" | translate
+    }}</span>
   </div>
 </footer>

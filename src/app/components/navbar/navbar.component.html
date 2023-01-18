@@ -22,45 +22,45 @@
       <a
         class="d-inline-block text-decoration-none text-white"
         [routerLink]="['home']"
-        >home</a
+        >{{ "home.navbar.home" | translate }}</a
       >
 
       <a
         class="d-inline-block text-decoration-none text-white"
         [routerLink]="['events']"
-        >events</a
+        >{{ "home.navbar.events" | translate }}</a
       >
       <a
         class="d-inline-block text-decoration-none text-white"
         [routerLink]="['contact']"
-        >contact</a
+        >{{ "home.navbar.contact" | translate }}</a
       >
       <a
         class="d-inline-block text-decoration-none text-white"
         [routerLink]="['aboutus']"
-        >about us</a
+        >{{ "home.navbar.aboutus" | translate }}</a
       >
-      <app-login></app-login>
-      <!-- <a
-        (click)="logout()"
-        *ngIf="logOutLogo"
-        class="d-inline-block text-decoration-none text-white"
-        [routerLink]="['/']"
-        >log out</a
-      > -->
-      <!-- <div class="language-picker-area">
-        <select name="" id="" class="language-picker">
-          <option value="en-US">ENG</option>
-          <option value="ro-RO">RO</option>
-        </select>
-      </div> -->
+      <app-login class="login"></app-login>
+
+      <button
+        (click)="switchEN()"
+        class="btn pull-right text-white bg-transparent"
+      >
+        EN
+      </button>
+      <button
+        (click)="switchRO()"
+        class="btn pull-right text-white bg-transparent"
+      >
+        RO
+      </button>
     </div>
   </nav>
   <div
     *ngIf="IsMessageVisible"
     class="nav-subtitle text-nowrap position-absolute text-white"
   >
-    <h1>la STORIA di Italia</h1>
+    <h1>{{ "home.navbar.message" | translate }}</h1>
     <app-modal></app-modal>
   </div>
 </div>

@@ -5,5 +5,10 @@
 }
 
 ::ng-deep .modal .wrapper .card {
+  background-color: inherit;
+}
+input {
   background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
 }

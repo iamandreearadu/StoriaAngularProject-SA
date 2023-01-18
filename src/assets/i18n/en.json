@@ -1,0 +1,98 @@
+{
+  "home": {
+    "navbar": {
+      "home": "home",
+      "events": "events",
+      "contact": "contact",
+      "aboutus": "about us",
+      "message": "The Story of Italy",
+      "reservationBtn": "make a reservation"
+    },
+    "reservationForm": {
+      "title": "make your reservation",
+      "chooseLocation": "Choose location",
+      "time": "Time",
+      "fullname": "Fullname",
+      "age": "Age",
+      "phone": "Phone",
+      "persons": "Persons",
+      "submitBtn": "Submit"
+    },
+    "locations": "locations",
+    "partners": "partners"
+  },
+  "events": {
+    "firstS": "Book now for your favorite event!",
+    "secondS": "We have prepared the most exclusive events for you in all our locations",
+    "addEvent": "Add event",
+    "formAddEvent": {
+      "location": "Location",
+      "event": "Event",
+      "guest": "Guest",
+      "date": "Date",
+      "hour": "Hour",
+      "duration": "Duration",
+      "price": "Price",
+      "free": "Free (true/ false)",
+      "phone": "Phone number"
+    },
+
+    "specialGuest": "Special Guest",
+    "modalBookEvent": {
+      "title": "Book your favourite event",
+      "congrats": "Congratulations",
+      "fullname": "Fullname",
+      "yourfullname": "Your fullname here...",
+      "age": "Age",
+      "yourage": "Your age here...",
+      "phone": "Phone",
+      "yourphone": "Your phone here...",
+      "successBooked": "You have successfully booked a ticket",
+      "bookBtn": "BOOK"
+    }
+  },
+  "contact": {
+    "contactUs": "Contact us",
+    "formContact": {
+      "contactForm": "Contact Form",
+      "firstName": "First name",
+      "lastName": "Last Name",
+      "phoneNumber": "Phone Number",
+      "subject": "Subject",
+      "messageHere": "Your message here...",
+      "submit": "Submit"
+    }
+  },
+  "storiaItalia": {
+    "specialty": "Specialty of the month",
+    "discover": "Discover",
+    "menuStoria": "menu storia italia",
+    "textMenu1": "Elegance is the 'ingredient' found both in our menu and in the atmosphere of the location. ",
+    "textMenu2": "We are waiting for you to discover it!",
+    "btnMenu": "open menu",
+    "ourStory": "Our story"
+  },
+  "footer": {
+    "locations": "locations",
+    "open": "open",
+    "monday": "Monday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "sunday": "Sunday",
+    "eventsOnly": "For event only",
+    "rightsReserved": "all rights reserved"
+  },
+  "login": {
+    "login": "LOGIN",
+    "email": "Email",
+    "password": "Password"
+  },
+  "validations": {
+    "fieldRequired": "Field required",
+    "onlyLetters": "Only letters allowed",
+    "onlyNumbers": "Only numbers allowed",
+    "charactersLong": "Phone number must be at least 8 characters long",
+    "charactersLong20": "Message must be at least 20 characters long",
+    "notEmail": "Not an email"
+  }
+}

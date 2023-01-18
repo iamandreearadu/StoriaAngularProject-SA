@@ -1,0 +1,98 @@
+{
+  "home": {
+    "navbar": {
+      "home": "acasa",
+      "events": "evenimente",
+      "contact": "contact",
+      "aboutus": "despre noi",
+      "message": "Istoria Italiei",
+      "reservationBtn": "rezerva acum"
+    },
+    "reservationForm": {
+      "title": "Rezerva o masa",
+      "chooseLocation": "Alege locatia",
+      "time": "Ora",
+      "fullname": "Nume",
+      "age": "Varsta",
+      "phone": "Telefon",
+      "persons": "Persoane",
+      "submitBtn": "Trimite"
+    },
+    "locations": "locatii",
+    "partners": "parteneri"
+  },
+  "events": {
+    "firstS": "Rezerva acum pentru evenimentul tau preferat!",
+    "secondS": "Am pregatit cele mai exclusiviste evenimente pentru tine în toate locatiile noastre",
+    "addEvent": "Adauga eveniment",
+    "formAddEvent": {
+      "location": "Locatie",
+      "event": "Eveniment",
+      "guest": "Invitat",
+      "date": "Data",
+      "hour": "Ora",
+      "duration": "Durata",
+      "price": "Pret",
+      "free": "Gratis (true/ false)",
+      "phone": "Telefon"
+    },
+
+    "specialGuest": "Invitat special",
+    "modalBookEvent": {
+      "title": "Rezerva acum pentru evenimentul tau preferat!",
+      "congrats": "Felicitari!",
+      "fullname": "Nume",
+      "yourfullname": "Numele tau aici...",
+      "age": "Varsta",
+      "yourage": "Varsta ta aici...",
+      "phone": "Telefon",
+      "yourphone": "Telefonul tau aici...",
+      "successBooked": "Ati rezervat cu succes un bilet",
+      "bookBtn": "REZERVA"
+    }
+  },
+  "contact": {
+    "contactUs": "Contacteaza-ne",
+    "formContact": {
+      "contactForm": "Formular de contact",
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "phoneNumber": "Telefon",
+      "subject": "Subiect",
+      "messageHere": "Scrie aici mesajul tau...",
+      "submit": "Trimite"
+    }
+  },
+  "storiaItalia": {
+    "specialty": "Specialitatea lunii",
+    "discover": "Descopera",
+    "menuStoria": "meniul storia italia",
+    "textMenu1": "Eleganta este 'ingredientul' gasit atat in meniul nostru, cat si in atmosfera locatiei.",
+    "textMenu2": "Va asteptam sa o descoperiti!",
+    "btnMenu": "meniu",
+    "ourStory": "Povestea noastra"
+  },
+  "footer": {
+    "locations": "locatii",
+    "open": "Orar",
+    "monday": "Luni",
+    "thursday": "Joi",
+    "friday": "Vineri",
+    "sunday": "Duminica",
+    "eventsOnly": "Numai pentru evenimente",
+    "rightsReserved": "toate drepturile rezervate"
+  },
+  "login": {
+    "login": "AUTENTIFICA-TE",
+    "email": "Email",
+    "password": "Parola"
+  },
+  "validations": {
+    "fieldRequired": "Camp necesar",
+    "onlyLetters": "Doar litere permise",
+    "onlyNumbers": "Doar numere permise",
+    "charactersLong": "Numarul de telefon trebuie să aiba cel putin 8 caractere",
+    "charactersLong20": "Mesajul trebuie să aiba cel putin 20 caractere",
+    "notEmail": "Email necesar"
+  }
+}
