@@ -6,7 +6,9 @@
       "contact": "contact",
       "aboutus": "despre noi",
       "message": "Istoria Italiei",
-      "reservationBtn": "rezerva acum"
+      "reservationBtn": "rezerva acum",
+      "login": "AUTENTIFICARE",
+      "logout": "DECONECTARE"
     },
     "reservationForm": {
       "title": "Rezerva o masa",

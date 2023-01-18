@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="correctRoute"></app-navbar>
 <router-outlet></router-outlet>
-<app-newsletter></app-newsletter>
-<app-footer></app-footer>
+<app-newsletter *ngIf="correctRoute"></app-newsletter>
+<app-footer *ngIf="correctRoute"></app-footer>

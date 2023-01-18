@@ -6,7 +6,9 @@
       "contact": "contact",
       "aboutus": "about us",
       "message": "The Story of Italy",
-      "reservationBtn": "make a reservation"
+      "reservationBtn": "make a reservation",
+      "login": "LOGIN",
+      "logout": "LOGOUT"
     },
     "reservationForm": {
       "title": "make your reservation",

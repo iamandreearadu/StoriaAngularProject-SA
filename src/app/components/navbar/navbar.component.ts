@@ -15,19 +15,18 @@ export class NavbarComponent implements OnInit {
   HeightNav: string = '550px';
   coloredTab: string = '';
   correctRoute: boolean = true;
-  //logInLogo: boolean = true;
 
   constructor(
     private route: Router,
     private authServ: AuthService,
     private translateServ: TranslateService
-  ) {
+  ) {}
+
+  ngOnInit(): void {
     this.route.events.subscribe(() => {
       this.setBannerAndLogo(this.route.url);
     });
   }
-
-  ngOnInit(): void {}
 
   switchEN() {
     this.translateServ.use('en');
@@ -76,14 +75,6 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  // loggedInCheck() {
-  //   this.logInLogo = true;
-  //   if (this.authServ.isLoggedIn()) {
-  //     this.logInLogo = false;
-  //   } else {
-  //     this.logInLogo = true;
-  //   }
-  // }
   logout() {
     this.authServ.logout();
     // this.logInLogo = true;

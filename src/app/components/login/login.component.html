@@ -3,7 +3,7 @@
   class="btn-reservation text-decoration-none w-auto text-uppercase text-white border-0 py-2 px-4"
   (click)="openModal(template)"
   *ngIf="!isLoggedIn"
-  >LOGIN
+  >{{ "home.navbar.login" | translate }}
 </a>
 
 <a
@@ -11,7 +11,7 @@
   class="btn-reservation text-decoration-none w-auto text-uppercase text-white border-0 py-2 px-4"
   *ngIf="isLoggedIn"
   (click)="clearStorage()"
-  >LOGOUT
+  >{{ "home.navbar.logout" | translate }}
 </a>
 
 <ng-template #template class="modal">
